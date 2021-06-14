@@ -13,7 +13,14 @@ IoT app designed for automation and remote control of an industrial mini-platfor
     connection, giving the user both manual and automated control, with the option of creating repetitive driving 
     cycles on user-defined routes.
 
-[Ducumentation](https://github.com/RaduPelin/Smart-Platform/blob/master/Documentation.pdf)
+# [Ducumentation](https://github.com/RaduPelin/Smart-Platform/blob/master/Documentation.pdf)
+
+# DEMO
+## [Automated Control with Android Application Response](https://www.youtube.com/watch?v=WIQSrX7ZCmY&ab_channel=RaduPelinRaduPelin)
+## [Dual Axis Solar Traking System](https://www.youtube.com/watch?v=DOA9bfct_bc&ab_channel=RaduPelinRaduPelin)
+## [Automated Control](https://www.youtube.com/watch?v=16OA-KMyPqs&ab_channel=RaduPelinRaduPelin)
+## [Manual Control](https://www.youtube.com/watch?v=iotzPiZrSkI&ab_channel=RaduPelinRaduPelin)
+
 
 
 ![App](https://github.com/RaduPelin/Smart-Platform/blob/master/App.jpg)
