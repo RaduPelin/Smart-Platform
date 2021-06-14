@@ -1,0 +1,246 @@
+package p.radu.platform;
+
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.os.AsyncTask;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.text.format.Formatter;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageButton;
+
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.lang.ref.WeakReference;
+import java.net.HttpURLConnection;
+import java.net.InetAddress;
+import java.net.MalformedURLException;
+import java.net.SocketTimeoutException;
+import java.net.URL;
+
+import javax.net.ssl.HttpsURLConnection;
+
+public class MainActivity extends AppCompatActivity {
+
+    private final ImageButton front = (ImageButton) findViewById(R.id.front);
+    private final ImageButton back = (ImageButton) findViewById(R.id.back);
+    private final ImageButton left = (ImageButton) findViewById(R.id.left);
+    private final ImageButton right = (ImageButton) findViewById(R.id.right);
+    private final ImageButton accelerateRight = (ImageButton) findViewById(R.id.accelerateRight);
+    private final ImageButton accelerateBack = (ImageButton) findViewById(R.id.accelerateBack);
+    private final ImageButton accelerateLeft = (ImageButton) findViewById(R.id.accelerateLeft);
+    private final ImageButton accelerateFront = (ImageButton) findViewById(R.id.accelerateFront);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+
+        accelerateBack.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    accelerateBack.setImageResource(R.drawable.accelerate_back);
+                    new Background_get().execute("L-B_A");
+                    /*AsyncTask task = new AsyncTask() {
+                        @Override
+                        protected Object doInBackground(Object[] objects) {
+                            NetworkSniffTask nsf = new NetworkSniffTask(getBaseContext());
+                            nsf.doInBackground();
+                            return null;
+                        }
+                    };
+                    task.execute();*/
+                    return true;
+                } else {
+                    accelerateBack.setImageResource(R.drawable.accelerate_back_pressed);
+                    new Background_get().execute("H-B_A");
+                    return false;
+                }
+            }
+        });
+
+        accelerateFront.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    accelerateFront.setImageResource(R.drawable.accelerate_front);
+                    new Background_get().execute("L-F_A");
+                    return true;
+                } else {
+                    accelerateFront.setImageResource(R.drawable.accelerate_front_pressed);
+                    new Background_get().execute("H-F_A");
+                    return false;
+                }
+            }
+        });
+
+        accelerateLeft.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    accelerateLeft.setImageResource(R.drawable.accelerate_left);
+                    new Background_get().execute("L-L_A");
+                    return true;
+                } else {
+                    accelerateLeft.setImageResource(R.drawable.accelerate_left_pressed);
+                    new Background_get().execute("H-L_A");
+                    return false;
+                }
+            }
+        });
+
+        accelerateRight.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    accelerateRight.setImageResource(R.drawable.accelerate_right);
+                    new Background_get().execute("L-R_A");
+                    return true;
+                } else {
+                    accelerateRight.setImageResource(R.drawable.accelerate_right_pressed);
+                    new Background_get().execute("H-R_A");
+                    return false;
+                }
+            }
+        });
+
+        back.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    back.setImageResource(R.drawable.back);
+                    new Background_get().execute("L-B");
+                    return true;
+                } else {
+                    back.setImageResource(R.drawable.back_pressed);
+                    new Background_get().execute("H-B");
+                    return false;
+                }
+            }
+        });
+
+        front.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    front.setImageResource(R.drawable.front);
+                    new Background_get().execute("L-F");
+                    return true;
+                } else {
+                    front.setImageResource(R.drawable.front_pressed);
+                    new Background_get().execute("H-F");
+                    return false;
+                }
+            }
+        });
+
+        left.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    left.setImageResource(R.drawable.left);
+                    new Background_get().execute("L-L");
+                    return true;
+                } else {
+                    left.setImageResource(R.drawable.left_pressed);
+                    new Background_get().execute("H-L");
+                    return false;
+                }
+            }
+        });
+
+        right.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                if (motionEvent.getAction() == MotionEvent.ACTION_UP) {
+                    right.setImageResource(R.drawable.right);
+                    new Background_get().execute("L-R");
+                    return true;
+                } else {
+                    right.setImageResource(R.drawable.right_pressed);
+                    new Background_get().execute("H-R");
+                    return false;
+                }
+            }
+        });
+    }
+
+    static class Background_get extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                /*********************************************************/
+                /* Change the IP to the IP you set in the arduino sketch */
+                /*********************************************************/
+                URL url = new URL("http://192.168.43.97/" + params[0]);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                StringBuilder result = new StringBuilder();
+                String inputLine;
+                while ((inputLine = in.readLine()) != null)
+                    result.append(inputLine).append("\n");
+
+                in.close();
+                connection.disconnect();
+                return result.toString();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+    }
+
+    static class NetworkSniffTask extends AsyncTask<Void, Void, Void> {
+        private static final String TAG = "p.radu.platform.ActivityMain.NetworkSniffTask";
+        private WeakReference<Context> mContextRef;
+
+        private NetworkSniffTask(Context context) {
+            mContextRef = new WeakReference<>(context);
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            Log.e(TAG, "Let's sniff the network");
+            try {
+                Context context = mContextRef.get();
+                if (context != null) {
+                    ConnectivityManager cm = (ConnectivityManager) context.getSystemService(CONNECTIVITY_SERVICE);
+                    NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+                    WifiManager wm = (WifiManager) context.getSystemService(WIFI_SERVICE);
+                    WifiInfo connectionInfo = wm.getConnectionInfo();
+                    int ipAddress = connectionInfo.getIpAddress();
+                    String ipString = Formatter.formatIpAddress(ipAddress);
+                    System.out.println(TAG + "activeNetwork: " + String.valueOf(activeNetwork));
+                    System.out.println(TAG + "ipString: " + String.valueOf(ipString));
+                    String prefix = ipString.substring(0, ipString.lastIndexOf(".") + 1);
+                    System.out.println(TAG + "prefix: " + prefix);
+                    for (int i = 0; i < 255; i++) {
+                        String testIp = prefix + String.valueOf(i);
+                        InetAddress name = InetAddress.getByName(testIp);
+                        String hostName = name.getCanonicalHostName();
+                        if (name.isReachable(100))
+                            System.out.println(TAG+"Host:" + hostName);
+                    }
+                }
+            } catch (Throwable t) {
+                System.out.println(TAG+"Well that's not good."+t);
+            }
+            return null;
+        }
+    }
+}
