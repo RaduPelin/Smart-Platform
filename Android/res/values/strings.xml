@@ -1,0 +1,160 @@
+<resources>
+    <string name="app_name">Smart Platform</string>
+    <string-array name="Extra">
+        <item>DeviceID</item>
+    </string-array>
+    <string name="FirstError">Please enter your first name</string>
+    <string name="LastError">Please enter your last name</string>
+    <string name="EmailError">Please enter your email address</string>
+    <string name="EmailInvalidError">Your email address should look like this: username@domain.extension</string>
+    <string name="PasswordError">Please enter the password</string>
+    <string name="PasswordInvalidError">Your password must contain more then 7 characters, at least one digit, one lower character, one upper character, one special character and no spaces</string>
+    <string name="RePasswordError">Please re-enter the password</string>
+    <string name="PhoneError">Please enter your phone number</string>
+    <string name="PhoneInvalidError">Your phone number should look like this: +y-xxx-xxx-xxxx</string>
+    <string name="DeviceIDError">Please enter the platform ID</string>
+    <string name="NotTheSameError">The passwords are not the same</string>
+    <string name="Registering">Registering...Please wait</string>
+    <string name="RegisterSuccess">Successfully registered...</string>
+    <string name="RegisterError">Failed to register...Try again</string>
+    <string name="NoDeviceError">There is no platform with this ID...Try another</string>
+    <string name="PlatformInUse">Your device is shared with another user and the platform is busy...Establish connection later or use another account</string>
+    <string name="PlatformInUseError">You can\'t change network settings while your device is shared with another user...Try later or use another account</string>
+    <string name="Connected">You are now connected with your physical device</string>
+    <string name="Disconnected">You are now disconnected from your physical device</string>
+    <string name="NetworkModified">Your network settings were modified</string>
+    <string name="SignIn">Signing in...Please wait</string>
+    <string name="CredentialsError">Wrong password or username...Try again</string>
+    <string name="ValidateEmail">Please check your email to activate your account</string>
+    <string name="ValidateEmailError">SmartPlatform could\'t send the email...Try again</string>
+    <string name="AccountActivated">Your account was activated</string>
+    <string name="Open">open</string>
+    <string name="Close">close</string>
+    <string name="CloseBtn">Close</string>
+    <string name="UserDB">users</string>
+    <string name="DeviceDB">devices</string>
+    <string name="Programs">programs</string>
+    <string name="ProgramSteps">steps</string>
+    <string name="Logout">Log Out</string>
+    <string name="Connect">To start the platform, please go to settings and establish the connection with your platform</string>
+    <string name="PluggedIn">Keep in mind that the platform must be plugged in</string>
+    <string name="DeleteAccount">Do you really want to delete your account?</string>
+    <string name="DeleteAccountError">You can\'t delete your account while a program is on</string>
+    <string name="Delete">Your account was deleted succesfully</string>
+    <string name="DeleteError">Sorry but we could\'t delete your account...Try again</string>
+    <string name="DeleteConnectedError">If you want to delete your account, please disconnect from your physical platform</string>
+    <string name="Reset">Check your email to reset your password</string>
+    <string name="ResetError">We could\'t send you the email...Try again</string>
+    <string name="ResetEmailError">Add an email and try again</string>
+    <string-array name="States">
+        <item>H-F</item>
+        <item>L-F</item>
+        <item>H-B</item>
+        <item>L-B</item>
+        <item>H-L_F</item>
+        <item>L-L_F</item>
+        <item>H-L_B</item>
+        <item>L-L_B</item>
+        <item>H-R_F</item>
+        <item>L-R_F</item>
+        <item>H-R_B</item>
+        <item>L-R_B</item>
+    </string-array>
+    <string-array name="Speeds">
+        <item>R-Speed1</item>
+        <item>R-Speed2</item>
+        <item>R-Speed3</item>
+        <item>R-Speed4</item>
+        <item>R-Speed5</item>
+    </string-array>
+    <string name="PlatformStop">R-Stop</string>
+    <string name="PlatformOn">On</string>
+    <string name="PlatformOff">Off</string>
+    <string name="TurnOnError">Turn on the platform controller</string>
+    <string name="DirectionError">Stop turning and then stop the platform</string>
+    <string name="TurnLeftError">Choose a direction and then turn to the left</string>
+    <string name="TurnRightError">Choose a direction and then turn to the right</string>
+    <string name="AccelerateError">You can\'t accelerate while you turn</string>
+    <string name="DecelerateError">You can\'t decelerate while you turn</string>
+    <string name="LogoutError">You can\'t logout while a program is on</string>
+    <string name="Wait">Configuring...Please wait a bit or check internet connection and repeat</string>
+    <string name="Blocked">Platform is blocked...There is an object</string>
+    <string name="Unlocked">Your platform is in a safer position</string>
+
+    <string-array name="Directions">
+        <item>Front</item>
+        <item>Back</item>
+        <item>Left</item>
+        <item>Right</item>
+        <item>Choose</item>
+    </string-array>
+
+    <string-array name="Distances">
+        <item>Centimeters</item>
+        <item>Meters</item>
+        <item>Units</item>
+    </string-array>
+
+    <string-array name="Delays">
+        <item>Seconds</item>
+        <item>Minutes</item>
+        <item>Hours</item>
+        <item>Units</item>
+    </string-array>
+
+    <string name="Program">Program Name</string>
+    <string name="Distance">Distance</string>
+    <string name="NumberOfLapses">Number of Lapses</string>
+    <string name="Delay">Delay</string>
+    <string name="ProgramError">Please enter a program name</string>
+    <string name="DistanceError">Please enter a distance</string>
+    <string name="InvalidDistanceError">Please enter a valid distance value</string>
+    <string name="InvalidCentimentersNumberError">Please enter maximum 999.99 centimeters</string>
+    <string name="InvalidMetersNumberError">Please enter maximum 2000 meters</string>
+    <string name="LapseError">Please enter a number of lapses</string>
+    <string name="AtLeastOneError">Please enter at least one lapse</string>
+    <string name="InvalideLapseError">Please enter a valid number of lapses</string>
+    <string name="DelayError">Please enter the delay</string>
+    <string name="InvalidDelayError">Please enter a valid delay value</string>
+    <string name="InvalidSecondsNumberError">Please enter maximum 59.99 seconds</string>
+    <string name="InvalidMinutesNumberError">Please enter maximum 59.99 minutes</string>
+    <string name="InvalidHoursNumberError">Please enter maximum 48 hours</string>
+    <string name="ChooseDirectionError">Please choose a direction</string>
+    <string name="ChooseDistanceUnitsError">Please choose a unit for the distance value</string>
+    <string name="ChooseDelayUnitsError">Please choose a unit for the delay value</string>
+    <string name="NoStepsError">No step was added</string>
+    <string name="Steps">Steps</string>
+    <string-array name="SuccessfullyAdded">
+        <item>
+            A new step was added to your program
+        </item>
+        <item>
+            A new program was successfully added
+        </item>
+    </string-array>
+    <string-array name="RemoveAssurance">
+        <item>
+           Are you sure you want to remove this step from your list?
+        </item>
+        <item>
+           Are you sure you want to remove program
+        </item>
+    </string-array>
+    <string name="Edited">Your step was edited successfully</string>
+    <string name="StepsError">Your program must have at least one step</string>
+    <string name="NoProgramWorning">You don\'t have a program</string>
+    <string name="AddFirstProgram">Add one right now</string>
+    <string name="ComeBack">Come Back</string>
+    <string name="Come">Come</string>
+    <string name="ProgramFinished">Your platform finished the program</string>
+    <string name="Speed">Speed:</string>
+    <string name="Stop">Stop the program</string>
+    <string name="Start">Start the program</string>
+    <string name="ChangeProgramError">You can\'t edit a program if it is on</string>
+    <string name="ChangeSettingsError">You can\'t change any settings while a program is on</string>
+    <string name="StartProgramError">You can start this program after closing program</string>
+    <string name="ManualControllerError">You can go to Manual Controller while a program is on</string>
+    <string name="CameBack">Your platform came back</string>
+    <string name="NoInternet">Your platform could\'t not connect</string>
+    <string name="Conecting">You can\’t change settings while the platform is connecting to the Internet</string>
+</resources>

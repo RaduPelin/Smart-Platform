@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@color/white">
+    <item android:id="@+id/account"
+        android:title="My Account"
+        android:icon="@drawable/account"/>
+    <item android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/settings"/>
+
+    <item android:id="@+id/logout"
+        android:title="Log Out"
+        android:icon="@drawable/logout"/>
+</menu>
+
+
