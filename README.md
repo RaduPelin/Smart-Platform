@@ -13,6 +13,8 @@ IoT app designed for automation and remote control of an industrial mini-platfor
     connection, giving the user both manual and automated control, with the option of creating repetitive driving 
     cycles on user-defined routes.
 
-[Ducumentation]()
+[Ducumentation](https://github.com/RaduPelin/Smart-Platform/blob/master/Documentation.pdf)
+
+
 ![App](https://github.com/RaduPelin/Smart-Platform/blob/master/App.jpg)
 ![Platform](https://github.com/RaduPelin/Smart-Platform/blob/master/platform.jpg)
