@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="66.410416mm"
+   height="49.741665mm"
+   viewBox="0 0 66.410417 49.741664"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="Axa Nord - Sud de umbrire.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-630.28569"
+     inkscape:cy="477.21429"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-159.58154,-225.35461)">
+    <path
+       style="fill:#000000;stroke-width:0.26458332"
+       d="m 162.07731,255.88086 c 0,-16.63196 0.0303,-17.801 0.50127,-19.31409 1.28085,-4.11538 5.19831,-7.78958 9.31789,-8.7393 0.64486,-0.14866 4.77818,-0.27054 9.29699,-0.27413 l 8.13594,-0.006 v 10.18646 10.18646 h 4.36562 4.36563 V 237.7338 227.54734 l 8.00364,0.006 c 4.42955,0.004 8.52213,0.12599 9.1647,0.27413 1.93807,0.4468 3.93955,1.54499 5.57453,3.05869 1.87632,1.73715 3.05433,3.5121 3.7984,5.72318 0.53909,1.60195 0.55928,2.20014 0.65188,19.31409 l 0.0956,17.66094 h -6.10373 -6.10373 v -5.29167 -5.29166 H 193.56277 173.9836 v 5.29166 5.29167 h -5.95312 -5.95313 z m 10.05417,10.82434 v -5.29166 h 21.43125 21.43125 v 5.29166 5.29167 h 4.23333 4.23334 v -17.06922 c 0,-9.38806 -0.10231,-17.27595 -0.22734,-17.52864 -0.12504,-0.25269 -0.57153,-1.14916 -0.99219,-1.99215 -0.81092,-1.62505 -2.79938,-3.79164 -4.33672,-4.72522 -2.33418,-1.41746 -3.25883,-1.54727 -11.02163,-1.54727 h -7.23462 v 10.18646 10.18646 h -5.95313 -5.95312 v -10.18646 -10.18646 h -7.36692 c -7.90775,0 -8.8127,0.12553 -11.15392,1.54727 -1.53734,0.93358 -3.5258,3.10017 -4.33672,4.72522 -0.42066,0.84299 -0.86715,1.73946 -0.99219,1.99215 -0.12503,0.25269 -0.22734,8.14058 -0.22734,17.52864 v 17.06922 h 4.23334 4.23333 z"
+       id="path285"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
